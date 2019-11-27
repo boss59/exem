@@ -47,27 +47,9 @@
             </div>
             <div>&nbsp;</div>
 
-            @if(!empty($video_arr['playlinks']['youku']))
-                <div>
-                    <strong>点👇观看：</strong><h2><a href="{{ isset($video_arr['playlinks']['qq']) ? $video_arr['playlinks']['qq'] : "" }}"><img src="/static/ccps/images/youku.png"></a></h2>
-                </div>
-            @elseif(!empty($video_arr['playlinks']['qq']))
-                <div>
-                    <strong>点👇观看：</strong><h2><a href="{{ isset($video_arr['playlinks']['seshi']) ? $video_arr['playlinks']['qq'] : "" }}"><img src="/static/ccps/images/youku.png"></a></h2>
-                </div>
-            @elseif(!empty($video_arr['playlinks']['leshi']))
-                <div>
-                    <strong>点👇观看：</strong><h2><a href="{{ isset($video_arr['playlinks']['pptv']) ? $video_arr['playlinks']['qq'] : "" }}"><img src="/static/ccps/images/youku.png"></a></h2>
-                </div>
-            @elseif(!empty($video_arr['playlinks']['pptv']))
-                <div>
-                    <strong>点👇观看：</strong><h2><a href="{{ isset($video_arr['playlinks']['sohu']) ? $video_arr['playlinks']['qq'] : "" }}"><img src="/static/ccps/images/youku.png"></a></h2>
-                </div>
-            @elseif(!empty($video_arr['playlinks']['sohu']))
-                <div>
-                    <strong>点👇观看：</strong><h2><a href="{{ isset($video_arr['playlinks']['youku']) ? $video_arr['playlinks']['youku'] : "" }}"><img src="/static/ccps/images/youku.png"></a></h2>
-                </div>
-            @endif
+            <div>
+                <strong>点👇观看：</strong><h2><a href="{{ isset($shi) ? $shi : "无资源" }}"><img src="/static/ccps/images/youku.png"></a></h2>
+            </div>
 
             <div class="editor">
                 <div>
