@@ -28,6 +28,6 @@ class IndexController extends Controller
     public function del_dir()
     {
         $path = "./cache/";
-        dir_del($path);
+        del_dir($path);
     }
 }
