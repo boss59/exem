@@ -21,6 +21,11 @@ class ShowController extends Controller
         $new_id=$request->input('new_id');// 接new_id
         $keys = "shownew".$new_id;// 定义 key
         $filename = "./cache/".$keys.".html";// 定义存放路径
+
+        $baseDir = "./cache/";// 如果没有此目录创建
+        if (!is_dir($baseDir)) {
+            mkdir($baseDir,0,777);
+        }
         if (file_exists($filename)) {
             $contents = file_get_contents($filename);
             echo $contents;die;

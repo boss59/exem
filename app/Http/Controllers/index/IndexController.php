@@ -15,6 +15,10 @@ class IndexController extends Controller
             $contents = file_get_contents("./cache/index.html");
             echo $contents;die;
         }else{
+            $baseDir = "./cache/";// 创建目录
+            if (!is_dir($baseDir)) {
+                mkdir($baseDir,0,777);
+            }
             echo view("index.index",['arr'=>data_arr(),'array'=>about($cid= "")]);
         }
         $con = ob_get_contents();
