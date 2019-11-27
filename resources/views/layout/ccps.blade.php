@@ -33,18 +33,24 @@
         </div>
 
         <nav>
-            <ul class="list-none">
-                <li id="nav_10001" style='width:121px;' class='navdown'><a href='{{ url('index/index') }}' class='nav'><span>网站首页</span></a></li>
+            <ul class="list-none" id="menu">
+                <li id="nav_10001" style='width:121px;' class='navdown'>
+                    <a href='{{ url('index/index') }}'><span>网站首页</span></a>
+                </li>
                 <li class="line"></li>
             @foreach($arr["nav"] as $v)
-                <li id='nav_1' style='width:121px;' >
-                    <a href='/index/news?nav_id={{ $v["nav_id"] }}' 0  class='hover-none nav'><span>{{ $v["nav_name"] }}</span></a>
+                <li id='nav_36' style='width:121px;' >
+                    <a href='/index/news?nav_id={{ $v["nav_id"] }}'><span>{{ $v["nav_name"] }}</span></a>
                 </li>
-            @endforeach
-                <li id='nav_36' style='width:120px;' ><a href='{{ url('/index/video') }}'   class='hover-none nav'><span>大地影院</span></a></li>
                 <li class="line"></li>
-                <li id='nav_22' style='width:120px;' ><a href='{{ url('/index/jokes') }}'  class='hover-none nav'><span>搞笑段子</span></a></li>
-            </ul></nav>
+            @endforeach
+                <li id='nav_1' style='width:120px;' >
+                    <a href='{{ url('/index/video') }}'><span>大地影院</span></a>
+                </li>
+                <li class="line"></li>
+                <li id='nav_1' style='width:120px;' ><a href='{{ url('/index/jokes') }}'><span>搞笑段子</span></a></li>
+            </ul>
+        </nav>
     </div>
 </header>
 
@@ -154,3 +160,14 @@
 
 </body>
 </html>
+<script>
+$(function(){
+
+    $(document).on('click','#menu',function(){
+        var urlstr = location.href;
+
+
+
+    })
+});
+</script>

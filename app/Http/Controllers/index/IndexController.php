@@ -24,4 +24,10 @@ class IndexController extends Controller
         $con = ob_get_contents();
         file_put_contents("./cache/index.html",$con);
     }
+
+    public function del_dir()
+    {
+        $path = "./cache/";
+        dir_del($path);
+    }
 }

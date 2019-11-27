@@ -97,7 +97,8 @@ Route::any('/index/news','index\NewController@new');// 新闻资讯
 Route::any('/index/shownews','index\ShowController@show');// 新闻内容
 Route::any('/index/jokes','index\JokesController@jokes');// 接口段子
 Route::any('/index/video','index\VideoController@video');// 接口视频
-Route::any('/index/del_cache','index\VideoController@del_cache');// 接口视频
+Route::any('/index/del_cache','index\VideoController@del_cache');// 清除接口视频
+Route::any('/index/del_dir','index\IndexController@del_dir');// 删除目录
 
 
 

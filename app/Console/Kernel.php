@@ -26,6 +26,11 @@ class Kernel extends ConsoleKernel
     {
         // $schedule->command('inspire')
         //          ->hourly();
+
+        // 定时删除 真静态文件
+//        $schedule->call(function () {
+//
+//        })->everyMinute();
     }
 
     /**
