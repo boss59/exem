@@ -18,7 +18,7 @@
             <div class="clear"></div>
 
             <div class="active" id="newslist">
-                @if($v['nav_id'] == 3)
+                @if($v['nav_id'] == 3 || $v['cid'] == 6)
                         @foreach($v['pro'] as $k=>$val)
                         <img class='listhot' src='{{ $val['images'] }}' alt='图片关键词' height="100" width="100"/>
                         <span>[{{ date("Y-m-d H:i:s",$val['add_time']) }}]</span>

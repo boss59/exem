@@ -131,7 +131,12 @@ function about($cid)
     }else{
         $array=CateModel::where('cate.cid',$cid)->get()->toarray();
         foreach($array as $k=>$v){
-            $array[$k]['son']=NewModel::join('voice',"new.new_id","=","voice.new_id")->where("cid",$v['cid'])->orderBy("new.new_id","desc")->get()->toArray();
+            if($v['cid'] == 6){
+                $array[$k]['pro']=ProductModel::where(['cid'=>$v['cid']])->get()->toarray();
+            }else{
+                $array[$k]['son']=NewModel::join('voice',"new.new_id","=","voice.new_id")->where("cid",$v['cid'])->orderBy("new.new_id","desc")->get()->toArray();
+            }
+
         }
     }
     return $array;

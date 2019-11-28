@@ -45,6 +45,7 @@ class NewController extends Controller
     // 如果是 分类 id存入 缓存
     public function cid($cid)
     {
+
         // 连接redis
         $keys = "cid".$cid;
         if(\Cache::has($keys)) {
