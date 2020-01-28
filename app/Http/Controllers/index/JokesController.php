@@ -9,6 +9,7 @@ class JokesController extends Controller
 {
     public function jokes()
     {
+
         return view("index.jokes",['arr'=>data_arr(),'jokes'=>jokes()]);
     }
 }

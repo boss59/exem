@@ -2,7 +2,7 @@
 use Illuminate\Support\Facades\Storage;
 use App\req\NavModel;
 use App\req\CateModel;
-use App\req\linkModel;
+use App\req\LinkModel;
 use App\req\ProductModel;
 use App\req\ImgModel;
 use App\req\NewModel;
@@ -113,7 +113,7 @@ function data_arr()
 
     $product=ProductModel::get()->toarray();
 
-    $link=linkModel::get()->toarray();
+    $link=LinkModel::get()->toarray();
 
     $cate = CateModel::get()->toarray();
 

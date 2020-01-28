@@ -16,6 +16,7 @@ class Login
      * @param  \Closure  $next
      * @return mixed
      */
+//    rbac
     public function handle($request, Closure $next)
     {
         if (empty(session("all"))){

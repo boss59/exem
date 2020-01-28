@@ -110,4 +110,9 @@ Route::any('/user/token','api\UserController@token');// api 数据
 Route::any('/user/aa','api\UserController@aa');// api 数据
 
 
+// ================   考试 ==================
+Route::any('/reg/reg','kaoshi\IndexController@reg');// 注册
+Route::any('/reg/index','kaoshi\IndexController@index');// 返回数据
+
+
 
